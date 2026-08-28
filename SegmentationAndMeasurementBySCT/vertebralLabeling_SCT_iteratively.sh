@@ -1,0 +1,1 @@
+for a in 08_mmrr/sub-*/anat/*T1w.nii.gz; do directory=$(dirname $a); base=$(basename $a .nii.gz); sct_label_vertebrae -i $a -s ${directory}/${base}_seg.nii.gz -initlabel ${directory}/label_c2c3.nii.gz -c t1 -qc ~/qc -ofolder ${directory}; done

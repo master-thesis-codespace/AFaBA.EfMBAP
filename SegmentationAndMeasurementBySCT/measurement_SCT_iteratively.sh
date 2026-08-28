@@ -1,0 +1,1 @@
+for a in ABRIM/sub-*/anat/*T1w.nii.gz; do directory=$(dirname $a); base=$(basename $a .nii.gz); sct_process_segmentation -i ${directory}/${base}_seg.nii.gz -vert 2:7 -vertfile ${directory}/${base}_seg_labeled_discs.nii.gz -perslice 0 -o csa_perlevel.csv -qc ~/qc -o ${directory}/csa_perlevel.csv; done
